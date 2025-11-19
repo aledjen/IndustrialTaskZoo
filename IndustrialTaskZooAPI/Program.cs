@@ -10,9 +10,19 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//InMemoryDB
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseInMemoryDatabase("IndustrialZooTask"));
+//DB Configuration
+var connectionString = builder.Configuration.GetConnectionString("IndustrialTaskConnection");
+var useInMemory = builder.Configuration.GetValue<bool>("UseInMemory");
+if (useInMemory)
+{
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseInMemoryDatabase("IndustrialZooTaskDb"));
+}
+else
+{
+    builder.Services.AddDbContext<AppDbContext>(options =>
+        options.UseNpgsql(connectionString));
+}
 // Add services to the container.
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 builder.Services.AddSingleton<IFoodStockRepository, FoodStockRepository>();
