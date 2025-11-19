@@ -19,7 +19,7 @@ namespace IndustrialTaskZooAPI.Data.Repositories.Animals
 
         public async Task<IReadOnlyCollection<Animal>> GetBySpeciesAsync(string species)
         {
-            return await _db.Animals.AsNoTracking().Where(a => a.Species == species).ToListAsync();
+            return await _db.Animals.AsNoTracking().Where(a => a.Species.Equals(species, StringComparison.OrdinalIgnoreCase)).ToListAsync();
         }
     }
 }

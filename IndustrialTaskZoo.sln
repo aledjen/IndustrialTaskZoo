@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36121.58 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialTaskZooAPI", "IndustrialTaskZooAPI\IndustrialTaskZooAPI.csproj", "{35C4E342-00BA-4129-9423-4C9B63ADE26B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndustrialTaskZooAPI.Tests", "IndustrialTaskZooAPI.Tests\IndustrialTaskZooAPI.Tests.csproj", "{7097FF18-E607-4C7B-9E49-3BB677BAB475}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{35C4E342-00BA-4129-9423-4C9B63ADE26B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35C4E342-00BA-4129-9423-4C9B63ADE26B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35C4E342-00BA-4129-9423-4C9B63ADE26B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7097FF18-E607-4C7B-9E49-3BB677BAB475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7097FF18-E607-4C7B-9E49-3BB677BAB475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7097FF18-E607-4C7B-9E49-3BB677BAB475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7097FF18-E607-4C7B-9E49-3BB677BAB475}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
